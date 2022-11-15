@@ -10,7 +10,7 @@ module.exports = {
 
         if(count1 > 0 && count2 > 0) {
             let room = await RoomModel.find({patient: data.patientId, doctor: data.doctorId}).exec();
-            return res.status(201).json(room);
+            return res.status(200).json(room);
         } else {
             const newData = new RoomModel();
             newData.patient = data.patientId;
